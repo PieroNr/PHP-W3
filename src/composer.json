@@ -1,8 +1,8 @@
 {
-    "name": "piero/docker",
+    "name": "piero/src",
     "autoload": {
         "psr-4": {
-            "Piero\\Docker\\": "src/"
+            "App\\": "app/"
         }
     },
     "authors": [

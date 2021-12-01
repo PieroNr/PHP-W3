@@ -7,20 +7,21 @@ namespace Composer\Autoload;
 class ComposerStaticInit0542a20803047f95fb0db1d11e955f27
 {
     public static $prefixLengthsPsr4 = array (
-        'P' => 
+        'A' => 
         array (
-            'Piero\\Docker\\' => 13,
+            'App\\' => 4,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Piero\\Docker\\' => 
+        'App\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/../..' . '/app',
         ),
     );
 
     public static $classMap = array (
+        'App\\Test' => __DIR__ . '/../..' . '/app/Test.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
