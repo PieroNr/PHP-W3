@@ -17,7 +17,7 @@
                 </li>
                 <li class="px-3"><a href="index.php">Home</a></li>
                 <li class="px-3"><a href="">Account</a></li>
-                <li class="px-3"><a href="users.php">Users</a></li>
+                <li class="px-3"><a class="active" href="users.php">Users</a></li>
                 <li class="px-3 ms-auto">
                     <button class="btn">Log in</button>
                 </li>

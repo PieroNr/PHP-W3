@@ -1,16 +1,7 @@
-.container {
-    width: 55%;
-
+.post, .comments{
+    width: 60%;
+    margin: auto;
 }
-
-.post{
-    padding: 3%;
-}
-
-.add-comments{
-    padding: 3%;
-}
-
 
 
 
@@ -53,9 +44,3 @@
      display: block
  }
 
- .btn{
-     color:white;
-     background: #1B1B1B;
-     border: none;
-     margin-top: 2%;
- }
