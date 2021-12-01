@@ -3,14 +3,14 @@ namespace App\Database;
 
 class Database{
 
-
+    private $servername = 'db';
     private $user  = 'root';
     private $password   = "example";
     private $database  = "projet-cms";
 
     public function getConnection(){
 
-        $conn = new \mysqli($this->host, $this->user, $this->password, $this->database);
+        $conn = new \mysqli($this->servername, $this->user, $this->password ,$this->database);
 
         if($conn->connect_error){
             die("Error failed to connect to MySQL: " . $conn->connect_error);
