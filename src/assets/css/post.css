@@ -1,6 +1,17 @@
 .container {
     width: 55%;
+
 }
+
+.post{
+    padding: 3%;
+}
+
+.add-comments{
+    padding: 3%;
+}
+
+
 
 
 .post > h2 > strong{
@@ -14,7 +25,7 @@
 
 }
 
-.post p{
+.post p, .add-comments p{
     font-size: 22px;
     width: 70%;
 }
@@ -24,15 +35,27 @@
     padding: 3% 0;
 }
 
-.post > p:nth-child(4), .post{
+.add-comments > p, .post{
     padding-bottom: 3%;
 }
 
- .post h3{
+ .add-comments h3{
     padding-bottom: 2%;
 }
 
 
  textarea{
      width: 67%;
+     height: 150px;
+ }
+
+ .add-comments button{
+     display: block
+ }
+
+ .btn{
+     color:white;
+     background: #1B1B1B;
+     border: none;
+     margin-top: 2%;
  }
