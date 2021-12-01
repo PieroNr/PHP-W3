@@ -1,0 +1,38 @@
+.container {
+    width: 55%;
+}
+
+
+.post > h2 > strong{
+    font-size: 50px;
+    padding-bottom: 2%;
+}
+
+.post > p:nth-child(2){
+    font-size: 12px;
+    font-style: italic;
+
+}
+
+.post p{
+    font-size: 22px;
+    width: 70%;
+}
+
+.post img{
+    width: 67%;
+    padding: 3% 0;
+}
+
+.post > p:nth-child(4), .post{
+    padding-bottom: 3%;
+}
+
+ .post h3{
+    padding-bottom: 2%;
+}
+
+
+ textarea{
+     width: 67%;
+ }
