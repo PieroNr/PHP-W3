@@ -1,0 +1,27 @@
+@import "variables.css";
+@import "table.css";
+@import "button.css";
+@import "theme.css";
+
+/* ========================
+        DIRECTIVES
+==========================*/
+
+body{
+    /*background: #e3e1e1;*/
+    font-family: "Fira Sans", sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+.container{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+

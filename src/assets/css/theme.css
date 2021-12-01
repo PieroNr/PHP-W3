@@ -1,0 +1,22 @@
+/*=========================
+         COLORS
+=========================*/
+
+.primary {
+    color: #f09904;
+}
+
+.danger {
+    color: #dc0d0d;
+}
+
+/*=========================
+        BACKGROUNDS
+=========================*/
+.bg-primary {
+    background-color: #f09904;
+}
+.bg-danger{
+    background-color: #dc0d0d;
+    color: white;
+}
