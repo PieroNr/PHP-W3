@@ -1,15 +1,8 @@
 
-
-.post{
-    padding: 3%;
+.post, .comments {
+    width: 60%;
+    margin: auto;
 }
-
-.add-comments{
-    padding: 3%;
-}
-
-
-
 
 .post > h2 > strong{
     font-size: 50px;
@@ -50,9 +43,3 @@
      display: block
  }
 
- .btn{
-     color:white;
-     background: #1B1B1B;
-     border: none;
-     margin-top: 2%;
- }

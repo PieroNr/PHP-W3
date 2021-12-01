@@ -9,9 +9,15 @@
     <body>
         <nav class="w-100 nav bg-primary">
             <ul class="d-flex a-i-center">
-                <li class="px-3"><a href="">Home</a></li>
+                <li class="px-3">
+                    <a class="d-flex a-i-center" style="opacity: 1;" href="index.php">
+                        <img style="width: 40px;" src="src/assets/img/logo.png" alt="logo">
+                    <h1>WRIT.OR</h1>
+                    </a>
+                </li>
+                <li class="px-3"><a href="index.php">Home</a></li>
                 <li class="px-3"><a href="">Account</a></li>
-                <li class="px-3"><a href="">Users</a></li>
+                <li class="px-3"><a class="active" href="users.php">Users</a></li>
                 <li class="px-3 ms-auto">
                     <button class="btn">Log in</button>
                 </li>
@@ -21,6 +27,7 @@
             </ul>
         </nav>
         <div class="container">
+            <div class="alert alert-danger">Si vous supprimer un utilisateur, ces posts seront automatiquement supprimer.</div>
             <table class="w-100 table">
                 <thead>
                     <tr>
@@ -42,7 +49,7 @@
                             </label>Administrateur ?
                         </td>
                         <td>
-                            <button class="btn bg-danger">Supprimer l'utilisateur</button>
+                            <button class="btn btn-danger">Supprimer l'utilisateur</button>
                         </td>
                     </tr>
                     <tr>
@@ -55,7 +62,7 @@
                             </label>Administrateur ?
                         </td>
                         <td>
-                            <button class="btn bg-danger">Supprimer l'utilisateur</button>
+                            <button class="btn btn-danger">Supprimer l'utilisateur</button>
                         </td>
                     </tr>
                     <tr>
@@ -68,7 +75,7 @@
                             </label>Administrateur ?
                         </td>
                         <td>
-                            <button class="btn bg-danger">Supprimer l'utilisateur</button>
+                            <button class="btn btn-danger">Supprimer l'utilisateur</button>
                         </td>
                     </tr>
                 </tbody>

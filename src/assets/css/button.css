@@ -4,9 +4,19 @@
     font-weight: bold;
     cursor: pointer;
     font-family: Tahoma, sans-serif;
+    border-style: solid;
 }
+.btn:hover{
+    opacity: .9;
+}
+
 .btn-secondary{
-    background-color: #dddddd;
-    color: #1b1b1b;
-    border-color: #dddddd;
+    background-color: #ececec;
+    color: #6a68fc;
+    border-color: #ececec;
+}
+.btn-danger{
+    background-color: #dc0d0d;
+    color: white;
+    border-color: #dc0d0d;
 }
