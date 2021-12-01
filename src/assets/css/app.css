@@ -2,14 +2,15 @@
 @import "table.css";
 @import "button.css";
 @import "theme.css";
+@import "nav.css";
 
 /* ========================
         DIRECTIVES
 ==========================*/
 
 body{
-    /*background: #e3e1e1;*/
-    font-family: "Fira Sans", sans-serif;
+    color: #1b1b1b;
+    font-family: Tahoma, sans-serif;
 }
 *{
     box-sizing: border-box;
@@ -22,6 +23,10 @@ li{
 .container{
     padding-left: 5%;
     padding-right: 5%;
+    margin-top: 1rem;
 }
-
+a, a:hover{
+    color: #1b1b1b;
+   text-decoration: none;
+}
 

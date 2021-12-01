@@ -1,0 +1,19 @@
+.nav{
+    padding: 1rem 3rem;
+    font-weight: bold;
+}
+
+.nav a, .nav a:hover{
+    color: #dddddd;
+}
+nav button{
+    background: none;
+    border: 1px solid #dddddd;
+    color: #dddddd;
+}
+.nav li a{
+    opacity: .5;
+}
+.nav li  a:hover {
+    opacity: 1;
+}

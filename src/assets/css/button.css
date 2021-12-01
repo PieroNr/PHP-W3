@@ -1,6 +1,12 @@
 .btn{
     border-radius: .25rem;
     padding: .5rem;
-    background: #f09904;
-    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Tahoma, sans-serif;
+}
+.btn-secondary{
+    background-color: #dddddd;
+    color: #1b1b1b;
+    border-color: #dddddd;
 }

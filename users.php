@@ -7,7 +7,19 @@
         <link rel="stylesheet" href="src/assets/css/app.css">
     </head>
     <body>
-        <!--        HEADER          -->
+        <nav class="w-100 nav bg-primary">
+            <ul class="d-flex a-i-center">
+                <li class="px-3"><a href="">Home</a></li>
+                <li class="px-3"><a href="">Account</a></li>
+                <li class="px-3"><a href="">Users</a></li>
+                <li class="px-3 ms-auto">
+                    <button class="btn">Log in</button>
+                </li>
+                <li class="px-3">
+                    <button class="btn btn-secondary">Sign in</button>
+                </li>
+            </ul>
+        </nav>
         <div class="container">
             <table class="w-100 table">
                 <thead>
