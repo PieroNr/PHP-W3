@@ -3,6 +3,7 @@
 @import "button.css";
 @import "theme.css";
 @import "nav.css";
+@import "alert.css";
 
 /* ========================
         DIRECTIVES
@@ -30,3 +31,6 @@ a, a:hover{
    text-decoration: none;
 }
 
+h1{
+    font-weight: bolder;
+}

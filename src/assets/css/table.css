@@ -2,13 +2,12 @@ table {
     border-collapse: collapse;
     width: 100%;
 }
-
-thead > tr {
-    background-color: #f09904;
+thead > tr{
+    background-color: #dddddd;
 }
 
 td, th {
-    border: 1px solid #dddddd;
+    border: 1px solid #ececec;
     border-right-style: none;
     border-left-style: none;
     text-align: left;
@@ -16,5 +15,5 @@ td, th {
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #ececec;
 }
