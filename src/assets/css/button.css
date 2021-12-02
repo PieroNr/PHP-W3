@@ -1,0 +1,27 @@
+.btn{
+    border-radius: .25rem;
+    padding: .5rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Tahoma, sans-serif;
+    border-style: solid;
+}
+.btn:hover{
+    opacity: .9;
+}
+
+.btn-primary{
+    background-color: #6a68fc;
+    border-color: #6a68fc;
+    color: #ececec;
+}
+.btn-secondary{
+    background-color: #ececec;
+    color: #6a68fc;
+    border-color: #ececec;
+}
+.btn-danger{
+    background-color: #dc0d0d;
+    color: white;
+    border-color: #dc0d0d;
+}

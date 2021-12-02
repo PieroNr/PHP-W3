@@ -1,0 +1,22 @@
+/* ========================
+        CLASSES
+==========================*/
+
+
+.w-100 {
+    width: 100%;
+}
+.d-flex {
+    display: flex;
+    flex-flow: wrap;
+}
+.a-i-center{
+    align-items: center;
+}
+.px-3{
+    padding-left: .6rem;
+    padding-right: .6rem;
+}
+.ms-auto{
+    margin-left: auto;
+}
