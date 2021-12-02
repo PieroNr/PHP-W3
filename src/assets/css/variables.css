@@ -17,6 +17,16 @@
     padding-left: .6rem;
     padding-right: .6rem;
 }
+.pt-1{
+    padding-top: .2rem;
+}
+.py-3{
+    padding-top: .6rem;
+    padding-bottom: .6rem;
+}
+.p-3{
+    padding: .6rem;
+}
 .ms-auto{
     margin-left: auto;
 }

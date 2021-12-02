@@ -42,22 +42,32 @@ $result = $users->getUsers();
             </ul>
         </nav>
         <div class="container">
-            <div class="post px-3 bg-secondary">
-                <h2><strong>Exemple post title</strong></h2>
-                <p>Ecrit par : nom de la personne <br/> Le : jj/mm/aaaa à hh:min</p>
-                <img alt="" src="https://images.unsplash.com/photo-1494253109108-2e30c049369b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80"/>
-                <p>Description du texte</p>
-            </div>
-            <div class="comments px-3">
-                <h3>Les commentaires</h3>
-                <h4>Auteur :</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, beatae, neque? Amet asperiores at cum
-                    earum eos est itaque magnam, molestiae odit quod reiciendis repellendus sapiente, tempora totam ut,
-                    voluptas!
-                </p>
-                <h3>Ajouter un commentaire</h3>
-                <textarea name="commentaire" id="input1" class="w-100" rows="4" cols="48"></textarea>
-                <button class="btn btn-secondary">Ajouter un article</button>
+            <div class="post-container">
+                <div class="post px-3 bg-primary">
+                    <div class="d-flex a-i-center mb-1 secondary">
+                        <h2>Example post title</h2>
+                    </div>
+                    <img alt="" src="https://images.unsplash.com/photo-1494253109108-2e30c049369b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80"/>
+                    <p class="p-3 secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores aspernatur assumenda dolore earum exercitationem modi nisi odio pariatur porro, quisquam, sunt, temporibus unde! Atque cupiditate mollitia nisi sint vero.</p>
+                    <div class="d-flex ms-auto p-3 secondary">
+                        <span class="author">Adrien Bouteiller</span>
+                        <span class="hour">le jj/mm/aaaa </span>
+                    </div>
+                </div>
+                <div class="comments px-3">
+                    <div class="mb-1">
+                        <h3>Commentaires</h3>
+                        <h6 class="comment-author">Tristan Seclet : </h6>
+                        <p class="comment px-3 pt-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, beatae, neque? Amet asperiores at cum
+                            earum eos est itaque magnam, molestiae odit quod reiciendis repellendus sapiente, tempora totam ut,
+                            voluptas!
+                        </p>
+                    </div>
+                    <div class="py-3">
+                        <textarea name="commentaire" id="input1" class="w-100" rows="4" cols="48"></textarea>
+                        <button class="btn btn-secondary">Commenter</button>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

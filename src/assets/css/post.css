@@ -1,9 +1,37 @@
-
-.post, .comments {
-    width: 60%;
+.post-container {
+    width: 50%;
     margin: auto;
 }
+.post{
+    border-radius: .25rem;
+    padding: 1rem;
+}
 
+.post img{
+    width: 70%;
+    transform: translateX(-50%);
+    position: relative;
+    left: 50%;
+}
+.post span.author{
+    font-style: italic;
+    margin-right: .3rem;
+}
+.comment{
+  color: #3b3b3b;
+
+}
+
+.comment-author{
+    font-size: 12px;
+    font-style: italic;
+    padding-bottom: .3rem;
+    padding-top: .3rem;
+    font-weight: bolder;
+    width: fit-content;
+    color: #3b3b3b;
+}
+/*
 .post > h2 > strong{
     font-size: 50px;
     padding-bottom: 2%;
@@ -43,3 +71,4 @@
      display: block
  }
 
+*/
