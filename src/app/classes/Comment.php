@@ -23,7 +23,7 @@ class Comment{
     }
 
     // GET ALL
-    public function getPosts(){
+    public function getComment(){
         $sqlQuery = "SELECT * FROM " . $this->db_table . " ";
         $stmt = $this->conn->prepare($sqlQuery);
         $stmt->execute();
