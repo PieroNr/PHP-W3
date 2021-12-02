@@ -4,6 +4,16 @@ namespace App\classes;
 
 class Articles
 {
+
+    private $postTable = 'posts';
+    private $categoryTable = 'cms_category';
+    private $userTable = 'cms_user';
+    private $conn;
+
+    public function __construct($db){
+        $this->conn = $db;
+    }
+
     public function getArticles()
     {
 
