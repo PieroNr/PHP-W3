@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import "variables.css";
 @import "table.css";
 @import "button.css";
@@ -12,7 +13,7 @@
 
 body{
     color: #1b1b1b;
-    font-family: Tahoma, sans-serif;
+    font-family: sans-serif;
 }
 *{
     box-sizing: border-box;
@@ -35,6 +36,7 @@ a.active{
     opacity: 1 !important;
 }
 h1{
+    font-family: 'Righteous', cursive;
     font-weight: bolder;
 }
 h2,h3, h4{

@@ -1,10 +1,11 @@
 .nav{
-    padding: 1rem 3rem;
-    font-weight: bold;
+    padding: .5rem 3rem;
+    font-size: 1rem;
+    font-weight: lighter;
 }
 
 .nav a, .nav a:hover{
-    color: #dddddd;
+    color: #ececec;
 }
 nav button{
     background: none;
@@ -16,4 +17,8 @@ nav button{
 }
 .nav li  a:hover {
     opacity: 1;
+}
+.nav img{
+    width: 50px;
+    margin-right:  .5rem;
 }

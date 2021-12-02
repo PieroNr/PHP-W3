@@ -1,9 +1,9 @@
 .btn{
     border-radius: .25rem;
-    padding: .5rem;
+    padding: .5rem .7rem;
     font-weight: bold;
     cursor: pointer;
-    font-family: Tahoma, sans-serif;
+    font-family: 'Righteous', cursive;
     border-style: solid;
 }
 .btn:hover{
@@ -17,7 +17,7 @@
 }
 .btn-secondary{
     background-color: #ececec;
-    color: #6a68fc;
+    color: #3b3b3b;
     border-color: #ececec;
 }
 .btn-danger{

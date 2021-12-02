@@ -3,10 +3,13 @@
 =========================*/
 
 .primary {
-    color: #6a68fc;
+    color: #3b3b3b;
 }
 .secondary{
     color: #ececec;
+}
+.purple{
+    color: #6a68fc;
 }
 .danger {
     color: #dc0d0d;
@@ -16,10 +19,13 @@
         BACKGROUNDS
 =========================*/
 .bg-primary {
-    background-color: #6a68fc;
+    background-color: #3b3b3b;
 }
 .bg-secondary{
     background-color: #ececec;
+}
+.bg-purple{
+    background-color: #6a68fc;
 }
 .bg-danger{
     background-color: #dc0d0d;
