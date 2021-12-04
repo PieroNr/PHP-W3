@@ -6,7 +6,6 @@ class Database {
     private $database_name = "projet-cms";
     private $username = "root";
     private $password = "example";
-
     public $conn;
 
     public function getConnection(){
@@ -20,6 +19,4 @@ class Database {
         return $this->conn;
     }
 }
-
-
 ?>

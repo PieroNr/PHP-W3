@@ -1,0 +1,15 @@
+.createPost{
+    width: 70%;
+    margin: auto;
+}
+
+label{
+    color: white;
+}
+body > div{
+    color: white;
+}
+
+body > div > div > button.btn.btn-secondary{
+    margin-bottom: 15px;
+}

@@ -16,8 +16,15 @@ class Post{
     public $authorid;
     public $content;
     public $publish;
+    public $title;
+    public $image_url;
 
     // Db connection
+    /**
+     * @var string
+     */
+
+
     public function __construct($db){
         $this->conn = $db;
     }
@@ -32,13 +39,16 @@ class Post{
 
     // CREATE
     public function createPost(){
-        $sqlQuery = "INSERT INTO
-                        ". $this->db_table ."
+        $sqlQuery = "INSERT INTO ". $this->db_table ."
                     SET
                         is_published = :ispublished, 
                         author_id = :authorid, 
                         content = :content, 
-                        publish_date = :publish";
+                        publish_date = :publish,
+                        title = :title,
+                        image_url = :image_url";
+
+
 
         $stmt = $this->conn->prepare($sqlQuery);
 
@@ -47,12 +57,16 @@ class Post{
         $this->authorid=htmlspecialchars(strip_tags($this->authorid));
         $this->content=htmlspecialchars(strip_tags($this->content));
         $this->publish=htmlspecialchars(strip_tags($this->publish));
+        $this->title=htmlspecialchars(strip_tags($this->title));
+        $this->image_url=htmlspecialchars(strip_tags($this->image_url));
 
         // bind data
         $stmt->bindParam(":ispublished", $this->ispublished);
         $stmt->bindParam(":authorid", $this->authorid);
         $stmt->bindParam(":content", $this->content);
         $stmt->bindParam(":publish", $this->publish);
+        $stmt->bindParam(":title", $this->title);
+        $stmt->bindParam(":image_url", $this->image_url);
 
         if($stmt->execute()){
             return true;
@@ -82,6 +96,8 @@ class Post{
         $this->authorid = $dataRow['author_id'];
         $this->content = $dataRow['content'];
         $this->publish = $dataRow['publish_date'];
+        $this->title = $dataRow['title'];
+        $this->title = $dataRow['image_url'];
     }
 
     // UPDATE
@@ -92,7 +108,9 @@ class Post{
                         is_published = :ispublished, 
                         author_id = :authorid, 
                         content = :content, 
-                        publish_date = :publish 
+                        publish_date = :publish,
+                        title = :title,
+                        image_url = :image_url  
                     WHERE 
                         id = :id";
 
@@ -103,6 +121,8 @@ class Post{
         $this->content=htmlspecialchars(strip_tags($this->content));
         $this->publish=htmlspecialchars(strip_tags($this->publish));
         $this->id=htmlspecialchars(strip_tags($this->id));
+        $this->image_url=htmlspecialchars(strip_tags($this->image_url));
+        $this->title=htmlspecialchars(strip_tags($this->title));
 
         // bind data
         $stmt->bindParam(":ispublished", $this->ispublished);
@@ -110,6 +130,8 @@ class Post{
         $stmt->bindParam(":content", $this->content);
         $stmt->bindParam(":publish", $this->publish);
         $stmt->bindParam(":id", $this->id);
+        $stmt->bindParam(":title", $this->title);
+        $stmt->bindParam(":image_url", $this->image_url);
 
         if($stmt->execute()){
             return true;

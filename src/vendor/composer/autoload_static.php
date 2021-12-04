@@ -22,6 +22,10 @@ class ComposerStaticInit0542a20803047f95fb0db1d11e955f27
 
     public static $classMap = array (
         'App\\Test' => __DIR__ . '/../..' . '/app/Test.php',
+        'App\\classes\\Articles' => __DIR__ . '/../..' . '/app/classes/Articles.php',
+        'App\\classes\\Comment' => __DIR__ . '/../..' . '/app/classes/Comment.php',
+        'App\\classes\\Post' => __DIR__ . '/../..' . '/app/classes/Post.php',
+        'App\\classes\\User' => __DIR__ . '/../..' . '/app/classes/User.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
