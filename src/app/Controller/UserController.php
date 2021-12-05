@@ -61,7 +61,7 @@ class UserController {
         $manager = new UserManager(Database::getConnection());
         $users = $manager->getAllUsers();
         $response['status_code_header'] = 'HTTP/1.1 200 OK';
-        $response['body'] = $users;
+        $response['body'] = json_encode($users);
 
         echo $response['body'];
         exit;

@@ -46,7 +46,7 @@ class PostManager
     {
         $query = "INSERT INTO posts(title, image_url, content, is_published, publish_date, author_id) 
                   VALUES ('" .$input['title']. "','" .$input['image_url']. "','" .$input['content']. "'," .$input['is_published']. ",'" .$input['publish_date']."'," .$input['author_id']. ");";
-
+    echo $query;
         return $this->db->query($query);
 
     }

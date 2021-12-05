@@ -8,23 +8,7 @@ use App\Model\User;
 require '../../vendor/autoload.php';
 
 session_start();
-if (isset($_POST['first_name'], $_POST['password'])) {
-
-
-
-    $first_name = stripslashes($_POST['first_name']);
-    $password = stripslashes($_POST['password']);
-
-    $user->firstname = $first_name;
-    $user->password = $password;
-
-    $user->getSingleUser();
-
-    header('Location: http://localhost:5555/index.php');
-    exit();
-
-
-}else{ ?>
+ ?>
     <h1>Connexion utilisateur</h1>
     <form action="login_post.php" method="post">
         <label for="nom">Email :</label>
@@ -38,6 +22,6 @@ if (isset($_POST['first_name'], $_POST['password'])) {
         <?php } ?>
     </form>
 
-<?php }
+<?php
 $content = ob_get_clean();
 require_once("template.php");

@@ -21,12 +21,17 @@ class ComposerStaticInit0542a20803047f95fb0db1d11e955f27
     );
 
     public static $classMap = array (
+        'App\\Controller\\CommentController' => __DIR__ . '/../..' . '/app/Controller/CommentController.php',
+        'App\\Controller\\PostController' => __DIR__ . '/../..' . '/app/Controller/PostController.php',
         'App\\Controller\\UserController' => __DIR__ . '/../..' . '/app/Controller/UserController.php',
         'App\\Database\\Database' => __DIR__ . '/../..' . '/app/Database/Database.php',
-        'App\\Test' => __DIR__ . '/../..' . '/app/Test.php',
-        'App\\classes\\Comment' => __DIR__ . '/../..' . '/app/classes/Comment.php',
-        'App\\classes\\Post' => __DIR__ . '/../..' . '/app/classes/Post.php',
-        'App\\classes\\User' => __DIR__ . '/../..' . '/app/classes/User.php',
+        'App\\Manager\\CommentManager' => __DIR__ . '/../..' . '/app/Manager/CommentManager.php',
+        'App\\Manager\\PostManager' => __DIR__ . '/../..' . '/app/Manager/PostManager.php',
+        'App\\Manager\\UserManager' => __DIR__ . '/../..' . '/app/Manager/UserManager.php',
+        'App\\Model\\BaseModel' => __DIR__ . '/../..' . '/app/Model/BaseModel.php',
+        'App\\Model\\Comment' => __DIR__ . '/../..' . '/app/Model/Comment.php',
+        'App\\Model\\Post' => __DIR__ . '/../..' . '/app/Model/Post.php',
+        'App\\Model\\User' => __DIR__ . '/../..' . '/app/Model/User.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 

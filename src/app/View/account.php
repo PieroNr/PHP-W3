@@ -3,12 +3,12 @@
 use App\Database\Database;
 use App\Manager\UserManager;
 require '../../vendor/autoload.php';
-
+session_start();
 ob_start();
 $managerUser = new UserManager(Database::getConnection());
 
-if (isset($_GET['id'])){
-    $user = $managerUser->getUser($_GET['id']);
+if (isset($_SESSION['idUser'])){
+    $user = $managerUser->getUser($_SESSION['idUser']);
 
     if (isset($_POST['firstname'],$_POST['lastname'],$_POST['email'],$_POST['password'])){
 
@@ -26,8 +26,18 @@ if (isset($_GET['id'])){
             'isadmin' => $isadmin
         );
 
+        $_SESSION['is_admin'] = $input['isadmin'];
+        $_SESSION['firstname'] = $input['firstname'];
+        $_SESSION['lastname'] = $input['lastname'];
+        $_SESSION['email'] = $input['email'];
+        $_SESSION['login'] = $input['email'];
+        $_SESSION['mdp'] = $input['password'];
 
-        $managerUser->updateUser($_GET['id'], $input);
+
+        $managerUser->updateUser($_SESSION['idUser'], $input);
+
+        header('Location: http://localhost:5555/app/view/posts.php');
+        exit();
     }
 
 ?>
@@ -45,6 +55,9 @@ if (isset($_GET['id'])){
     </form>
 
 <?php
+} else {
+    header('Location: http://localhost:5555/app/view/login.php');
+    exit();
 }
 $content = ob_get_clean();
 require_once("template.php"); ?>

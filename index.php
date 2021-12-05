@@ -5,14 +5,14 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Accueil</title>
-        <link rel="stylesheet" href="src/assets/css/app.css">
+        <link rel="stylesheet" href="src/app/assets/css/app.css">
     </head>
     <body>
         <nav class="w-100 nav bg-primary">
             <ul class="d-flex a-i-center">
                 <li class="px-3">
                     <a class="d-flex a-i-center" style="opacity: 1;" href="index.php">
-                        <img style="width: 40px;" src="src/assets/img/logo.png" alt="logo">
+                        <img style="width: 40px;" src="src/app/assets/img/logo.png" alt="logo">
                         <h1>WRIT.OR</h1>
                     </a>
                 </li>

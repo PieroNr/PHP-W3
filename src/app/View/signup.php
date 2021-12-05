@@ -29,8 +29,11 @@ if (isset($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['pass
     $manager = new UserManager(Database::getConnection());
     $manager->createUser($input);
 
-    //header('Location: http://localhost:5555/index.php');
-    //exit();
+    $_POST['login'] = $_POST['email'];
+    $_POST['mdp'] = $_POST['password'];
+
+    header('Location: http://localhost:5555/app/view/login_post.php');
+    exit();
 
 
 }else{

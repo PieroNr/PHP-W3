@@ -29,32 +29,14 @@ if (isset($_POST['login']) && isset($_POST['mdp'])) {
         $_SESSION['idUser']= $res['id'];
         $_SESSION['firstname'] = $res['first_name'];
         $_SESSION['lastname'] = $res['last_name'];
+        $_SESSION['email'] = $res['email'];
+
 
     }
+
 }
+header('Location: http://localhost:5555/app/view/posts.php');
+exit();
 ?>
 
-<!doctype html>
-<html>
-<head>
-    <meta charset="UTF-8" />
-    <title>Résultat de l'authentification</title>
-</head>
-<body>
-<h1>Résultat de l'authentification</h1>
-<?php
-if (isset($authOK)) {
-    echo "<p>Vous avez été reconnu(e) en tant que " . $_SESSION['login'] . "</p>";
-    if ($_SESSION['is_admin'] == 1){
-        echo "<p>Vous êtes admin</p>";
-    } else {
-        echo "<p>Vous est utilisateur standard</p>";
-    }
-    echo '<a href="posts.php">Poursuivre vers la page d\'accueil</a>';
-}
-else { ?>
-    <p>Vous n'avez pas été reconnu(e)</p>
-    <p><a href="login.php">Nouvel essai</p>
-<?php } ?>
-</body>
-</html>
+

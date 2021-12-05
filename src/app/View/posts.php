@@ -5,6 +5,8 @@ use App\Manager\CommentManager;
 use App\Manager\PostManager;
 use App\Manager\UserManager;
 
+session_start();
+
 ob_start();
 
 
@@ -32,63 +34,85 @@ if (isset($_POST['content'], $_POST['post_id'])) {
 
 
 
-} else {
+}
     ?>
     <div class="container">
+        <button class="btn btn-secondary" onclick="window.location.href = 'createPost.php';">Créer Post</button>
     <?php foreach ($recipes as $recipe) {
         $recipesComments = $managerComment->getAllCommentsByPost($recipe['id']);
         $recipeUser = $managerUser->getUser($recipe['author_id']);
         ?>
 
-        <a href="modifPost.php?id=<?php echo $recipe['id']?>">
+
             <div class="post-container">
                 <div class="post px-3 bg-primary">
+
                     <div class="d-flex a-i-center mb-1 secondary">
                         <h2><?php echo $recipe['title']; ?></h2>
                     </div>
                     <img alt=""
-                         src="https://images.unsplash.com/photo-1494253109108-2e30c049369b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80"/>
+                         src="http://localhost:5555<?php echo $recipe['image_url'] ?>"/>
                     <p class="p-3 secondary"><?php echo $recipe['content']; ?></p>
                     <div class="d-flex ms-auto p-3 secondary">
                         <span class="author"
-                              style="width: 100%"><?php echo $recipeUser['first_name']; ?><?php echo $recipeUser['last_name']; ?></span>
+                              style="width: 100%"><?php echo $recipeUser['first_name']; ?> <?php echo $recipeUser['last_name']; ?></span>
                         <span class="hour"><?php echo $recipe['publish_date']; ?></span>
                     </div>
+                    <?php
+
+                    if(isset($_SESSION['login'], $_SESSION['mdp'])) {
+                        if ($_SESSION['is_admin'] == 1) {
+                            ?>
+                            <li class="px-3">
+                                <button class="btn btn-secondary"
+                                        onclick="window.location.href = 'modifPost.php?id=<?php echo $recipe['id']; ?>';">
+                                    Modifier
+                                </button>
+
+                            </li>
+                            <li class="px-3">
+                                <button class="btn btn-danger"
+                                        onclick="window.location.href = 'deletePost.php?id=<?php echo $recipe['id']; ?>';">
+                                    Supprimer
+                                </button>
+                            </li>
+                        <?php }
+                    }?>
+
+
                 </div>
-        </a>
 
-        <div class="comments px-3">
-            <div class="mb-1">
-                <h3>Commentaires</h3>
 
-                <?php foreach ($recipesComments
+                <div class="comments px-3">
+                        <h3>Commentaires</h3>
 
-                as $recipeComment) {
-                $recipeUser = $managerUser->getUser($recipeComment['author_id']); ?>
+                        <?php foreach ($recipesComments  as $recipeComment) {
+                        $recipeUser = $managerUser->getUser($recipeComment['author_id']); ?>
 
-                <h6 class="comment-author"><?php echo $recipeUser['first_name']; ?> <?php echo $recipeUser['last_name']; ?>
-                    : </h6>
+                                <div class="mb-1">
 
-                <p><?php echo $recipeComment['publish_date']; ?></p>
+                                <h6 class="comment-author"><?php echo $recipeUser['first_name']; ?> <?php echo $recipeUser['last_name']; ?>
+                                    : </h6>
 
-                <p class="comment px-3 pt-1"><?php echo $recipeComment['content']; ?></p>
-            </div>
-            <?php } ?>
+                                <p><?php echo $recipeComment['publish_date']; ?></p>
 
-            <form method="post">
-                <div class="py-3">
-                    <textarea name="content" id="input1" class="w-100" rows="4" cols="48"></textarea>
-                    <div>
-                        <input name="post_id" value="<?php echo $recipe['id'] ?>" style="display: none">
-                        <button type="submit" class="btn btn-secondary">Commenter</button>
-                    </div>
+                                <p class="comment px-3 pt-1"><?php echo $recipeComment['content']; ?></p>
+                            </div>
+
+                    <?php } ?>
                 </div>
-            </form>
+                    <form method="post" action="posts.php">
+                        <div class="py-3">
+                            <textarea name="content" id="input1" class="w-100" rows="4" cols="48"></textarea>
+                            <div>
+                                <input name="post_id" value="<?php echo $recipe['id'] ?>" style="display: none">
+                                <button type="submit" class="btn btn-secondary">Commenter</button>
+                            </div>
+                        </div>
+                    </form>
 
-        </div>
-        </div>
-    <?php } ?>
-    </div>
+
+
 <?php }
 
 $content = ob_get_clean();

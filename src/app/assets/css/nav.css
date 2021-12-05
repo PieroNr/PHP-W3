@@ -1,0 +1,48 @@
+.nav{
+    padding: 1rem 3rem;
+    font-weight: bold;
+}
+
+.nav a, .nav a:hover{
+    color: #dddddd;
+}
+nav button{
+    background: none;
+    border: 1px solid #ececec;
+    color: #ececec;
+}
+.nav li a{
+    opacity: .5;
+}
+.nav li  a:hover {
+    opacity: 1;
+}
+
+.sous{
+    display: none!important;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+nav > ul li:hover .sous{
+    display: block;
+}
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+.sous a{
+    padding: 10px;
+    border-bottom: none;
+}
+.sous a:hover{
+    border-bottom: none;
+    background-color: RGBa(200,200,200,0.1);
+}
+.deroulant > a::after{
+    content:" ▼";
+    font-size: 12px;
+}
