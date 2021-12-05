@@ -1,25 +1,34 @@
 <?php
+
 namespace App\Database;
 
-class Database {
-    private $host = "db";
-    private $database_name = "projet-cms";
-    private $username = "root";
-    private $password = "example";
+use PDOException;
 
-    public $conn;
+class Database
+{
+    private static $host = "db";
 
-    public function getConnection(){
-        $this->conn = null;
-        try{
-            $this->conn = new \PDO("mysql:host=" . $this->host . ";dbname=" . $this->database_name, $this->username, $this->password);
-            $this->conn->exec("set names utf8");
-        }catch(PDOException $exception){
+    private static $database_name = "projet-cms";
+
+    private static $username = "root";
+
+    private static $password = "example";
+
+
+    /**
+     * @return \PDO
+     */
+    public static function getConnection(): \PDO
+    {
+        try {
+            $conn = new \PDO("mysql:host=" . self::$host . ";dbname=" . self::$database_name, self::$username, self::$password);
+            $conn->exec("set names utf8");
+        } catch (PDOException $exception) {
             echo "Database could not be connected: " . $exception->getMessage();
         }
-        return $this->conn;
+
+        return $conn;
     }
 }
-
 
 ?>
