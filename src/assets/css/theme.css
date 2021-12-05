@@ -1,0 +1,27 @@
+/*=========================
+         COLORS
+=========================*/
+
+.primary {
+    color: #6a68fc;
+}
+.secondary{
+    color: #ececec;
+}
+.danger {
+    color: #dc0d0d;
+}
+
+/*=========================
+        BACKGROUNDS
+=========================*/
+.bg-primary {
+    background-color: #6a68fc;
+}
+.bg-secondary{
+    background-color: #ececec;
+}
+.bg-danger{
+    background-color: #dc0d0d;
+    color: white;
+}
